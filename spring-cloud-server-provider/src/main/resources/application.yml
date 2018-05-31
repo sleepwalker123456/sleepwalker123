@@ -1,0 +1,11 @@
+
+spring:
+  application:
+    name: eureka-client-server-provider
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@master:8761/eureka
+server:
+  port: 8763
+

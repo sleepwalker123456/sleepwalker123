@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/forezp/SpringcloudConfig/
+          search-paths: respo
+          username: #your username
+          passphrase: #your password
+
+
+server:
+  port: 18088
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+

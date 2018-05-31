@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: eureka-server-zuul
+server:
+  port: 8799
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+
+
+zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: EUREKA-CLIENT-RIBBON-HYSTRIX
+    api-b:
+      path: /api-b/**
+      serviceId: EUREKA-SERVER-CONSUMER-FEIGN-HYSTRIX
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000

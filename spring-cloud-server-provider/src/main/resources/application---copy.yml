@@ -1,0 +1,41 @@
+spring:
+  profiles: client1
+  application:
+    name: eureka-client-server-provider1
+server:
+  port: 18081
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@master:18085/eureka,http://admin:admin@backup1:18086/eureka,http://admin:admin@backup2:18087/eureka
+
+
+---
+spring:
+  profiles: client2
+  application:
+    name: eureka-client-server-provider2
+server:
+  port: 18082
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@master:18085/eureka,http://admin:admin@backup1:18086/eureka,http://admin:admin@backup2:18087/eureka
+
+---
+spring:
+  profiles: client3
+  application:
+    name: eureka-client-server-provider3
+server:
+  port: 18083
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@master:18085/eureka,http://admin:admin@backup1:18086/eureka,http://admin:admin@backup2:18087/eureka
+
+---
+spring:
+  profiles: client
+  application:
+    name: eureka-client-server-provider

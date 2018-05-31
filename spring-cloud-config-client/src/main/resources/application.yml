@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-cloud-config-client
+  cloud:
+    config:
+      label: master #\u6307\u660E\u8FDC\u7A0B\u4ED3\u5E93\u7684\u5206\u652F
+      profile: dev #\u5F00\u53D1\u73AF\u5883\u914D\u7F6E\u6587\u4EF6  test\u6D4B\u8BD5\u73AF\u5883\u914D\u7F6E\u6587\u4EF6   pro\u6B63\u5F0F\u73AF\u5883\u914D\u7F6E\u6587\u4EF6
+      uri: http://localhost:18088/ #\u6307\u660E\u914D\u7F6E\u670D\u52A1\u4E2D\u5FC3\u7684\u5730\u5740
+server:
+  port: 18099
+
