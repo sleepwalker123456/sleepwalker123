@@ -5,8 +5,8 @@ spring:
 #添加安全验证
 security:
   user:
-    name: admin123
-    password: admin123
+    name: admin
+    password: admin
 
 #服务注册中心端口号
 server:
