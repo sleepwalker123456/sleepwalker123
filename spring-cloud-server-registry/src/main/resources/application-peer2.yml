@@ -1,0 +1,9 @@
+server:
+  port: 18085
+
+eureka:
+  instance:
+    hostname: master
+  client:
+    serviceUrl:
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka,http://${security.user.name}:${security.user.password}@backup1:18086/eureka/,http://${security.user.name}:${security.user.password}@backup2:18087/eureka
